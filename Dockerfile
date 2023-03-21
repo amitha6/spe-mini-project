@@ -1,4 +1,4 @@
 FROM openjdk:11
-COPY ./target/ScientificCalculator-1.0-SNAPSHOT-jar-with-dependencies.jar ./
+COPY ./target/Scientific_Calculator-1-jar-with-dependencies.jar ./
 WORKDIR ./
-CMD ["java", "-jar", "ScientificCalculator-1.0-SNAPSHOT-jar-with-dependencies.jar"]
+CMD ["java", "-jar", "Scientific_Calculator-1-jar-with-dependencies.jar"]

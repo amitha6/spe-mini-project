@@ -3,8 +3,14 @@ import java.util.Scanner;
 import java.util.*;
 import java.lang.Math.*;
 
+import java.util.InputMismatchException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
  public class calculator
   {
+    private static final Logger logger = LogManager.getLogger(calculator.class);
+    static calculator calc = new calculator();
     public static void main(String args[])
      {
        float a, b;
@@ -61,34 +67,54 @@ import java.lang.Math.*;
 
     public static double squareroot(float x)
     {
+        if(x < 0)
+        {
+            logger.info("Error - Negative Number");
+        }
+        // logger.info();
         double res = 0;
         res = Math.sqrt(x);
+        logger.info("SquareRoot of - " + x + " is - " + res);
         return res;
     }
 
     public static long factorial(float x)
     {
+        if(x < 0){
+            logger.error("Error - Negative Number");
+            return -1;
+        }
+        // logger.info();
         long res = 1;
         for(int i=1; i<=x; i++)
         {
             res *= i;
         }
+        logger.info("Factorial of - " + x + " is - " + res);
         return res;
     }
 
     public static double lnx(float x)
     {
-        double res = Math.log(x);
-        return res;
+        if(x < 0)
+        {
+            logger.error("Error - Negative Number");
+        }
+        // logger.info();
+        double ret = Math.log(x);
+        logger.info("Natural log of - " + x + " is - " + ret);
+        return ret;
     }
 
     public static long power(float x, float b)
     {
+        // logger.info();
         long res = 1;
         for(int i=1; i<=b; i++)
         {
             res *= x;
         }
+        logger.info("power of - " + x + ", " + b + " is - " + res);
         return res;
     }
 }

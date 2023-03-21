@@ -1,3 +1,4 @@
+
 pipeline {
     // environment{
     //     imageName = ""
@@ -10,14 +11,6 @@ pipeline {
                 // Get some code from a GitHub repository
                 git url:'https://github.com/amitha6/spe-mini-project',
                     branch:"main"
-            }
-        }
-        stage('Maven Test'){
-            steps{
-                script{
-                    sh 'mvn test'
-                    
-                } 
             }
         }
         stage('Maven Build'){
@@ -46,7 +39,7 @@ pipeline {
                 }
             }
         }
-        stage('Ansible pull docker image')
+        stage('Ansible deployment')
         {
             steps{
 
