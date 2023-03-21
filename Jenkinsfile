@@ -36,16 +36,16 @@ pipeline {
                 }
             }
         }
-        // stage('Push Docker Image')
-        // {
-        //     steps{
-        //         script{
-        //             docker.withRegistry("", 'docker_cred' ){
-        //                 imageName.push()
-        //             }
-        //         }
-        //     }
-        // }
+        stage('Push Docker Image')
+        {
+            steps{
+                script{
+                    docker.withRegistry("", 'docker_cred' ){
+                        imageName.push()
+                    }
+                }
+            }
+        }
         // stage('Ansible pull docker image')
         // {
         //     steps{
