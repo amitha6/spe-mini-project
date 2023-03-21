@@ -46,13 +46,13 @@ pipeline {
                 }
             }
         }
-        // stage('Ansible pull docker image')
-        // {
-        //     steps{
+        stage('Ansible pull docker image')
+        {
+            steps{
 
-        //         // sh "ansible-playbook log4j2.yml -i inventory"
-        //         ansiblePlaybook becomeUser: null, colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'playbook.yml', sudoUser: null
-        //     }
-        // }
+                // sh "ansible-playbook log4j2.yml -i inventory"
+                ansiblePlaybook becomeUser: null, colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'playbook.yml', sudoUser: null
+            }
+        }
     }
 }
