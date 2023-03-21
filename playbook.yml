@@ -1,5 +1,5 @@
 - name: Pull and Run docker image
-  hosts: all
+  hosts: host_machine
   tasks:
 
     - name: Pull Image
