@@ -19,7 +19,7 @@ import org.apache.logging.log4j.Logger;
 	      
       	do
          {
-	   System.out.print("----Calculator----\n");
+	   System.out.print("----Wel come Calculator----\n");
            System.out.print("1. Square root function\n");
            System.out.print("2. factorial function\n");
            System.out.print("3. natural logarithm\n");
